@@ -31,14 +31,14 @@ public class IntelQuery {
     }
 
     public String getDescription() {
-        String off = isEnabled() ? "" : " (disabled)";
+        String off = isEnabled() ? "" : " (收起)";
         String stale = isStale() ? " (stale)" : "";
         return intelProvider.getDescription() + off + stale;
     }
 
     public String getResultCount() {
         int count = hypernetIntels.size();
-        String intelOrIntels = count == 1 ? " result" : " results";
+        String intelOrIntels = count == 1 ? " 结果" : " 结果";
         return String.valueOf(count) + intelOrIntels;
     }
 
