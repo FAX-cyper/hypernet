@@ -61,7 +61,7 @@ public class DialogPlugin implements InteractionDialogPlugin {
         visual = d.getVisualPanel();
         visual.showImagePortion("illustrations", "hypernet", 640, 400, 0, 0, 480, 300);
 
-        addTitle("超检索");
+        addTitle("超空间检索");
         textPanel.addPara("欢迎使用超空间检索网络!");
         showMenu();
     }
