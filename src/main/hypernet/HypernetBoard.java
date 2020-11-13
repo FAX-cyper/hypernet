@@ -64,15 +64,15 @@ public class HypernetBoard extends BaseIntelPlugin {
     public void createIntelInfo(TooltipMakerAPI info, ListInfoMode mode) {
         Color bulletColor = getBulletColorForMode(mode);
         Color highlightColor = Misc.getHighlightColor();
-        info.addPara("HyperNET Board", getTitleColor(mode), 0);
+        info.addPara("超空间检索{版面", getTitleColor(mode), 0);
 
         int queriesPresent = queries.size();
         if (queriesPresent == 1) {
-            info.addPara("Managing %s intel query.", 1f, bulletColor, highlightColor, "1");
+            info.addPara("完成{%s}次查询.", 1f, bulletColor, highlightColor, "1");
         } else if (queriesPresent > 1) {
-            info.addPara("Managing %s intel queries.", 1f, bulletColor, highlightColor, String.valueOf(queriesPresent));
+            info.addPara("完成{%s}次查询.", 1f, bulletColor, highlightColor, String.valueOf(queriesPresent));
         } else {
-            info.addPara("No intel queries present.", 1f, bulletColor);
+            info.addPara("尚无查询记录.", 1f, bulletColor);
         }
         info.addPara("", 1f);
     }
