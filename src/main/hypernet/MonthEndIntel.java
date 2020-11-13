@@ -14,7 +14,7 @@ public class MonthEndIntel extends BaseIntelPlugin {
 
     @Override
     public void createIntelInfo(TooltipMakerAPI info, ListInfoMode mode) {
-        info.addPara("HyperNET Intel", getTitleColor(mode), 0f);
+        info.addPara("超检索网络", getTitleColor(mode), 0f);
         indent(info);
         info.addPara(message, 3f, getBulletColorForMode(mode));
         unindent(info);
