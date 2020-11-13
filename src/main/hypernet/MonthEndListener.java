@@ -22,7 +22,7 @@ public class MonthEndListener implements EconomyTickListener {
     @Override
     public void reportEconomyMonthEnd() {
         MonthEndIntel intel = new MonthEndIntel(
-                "New month has started. HyperNET Intel could be stale - please consider refreshing.");
+                "新的月份开始，超检索网络的信息可能已过期 - 请记得刷新.");
         toggleIntel(intel);
     }
 
@@ -31,7 +31,7 @@ public class MonthEndListener implements EconomyTickListener {
         int maxTicks = Global.getSettings().getInt("economyIterPerMonth");
         boolean isSecondToLastTick = maxTicks - tick == 2;
         if (isSecondToLastTick) {
-            MonthEndIntel intel = new MonthEndIntel("New month will start soon and HyperNET Intel may become stale!");
+            MonthEndIntel intel = new MonthEndIntel("本月份即将结束，超检索网络的信息可能会过期!");
             toggleIntel(intel);
         }
     }
