@@ -30,9 +30,9 @@ public class HypernetIntel extends BaseIntelPlugin {
         Color bulletColor = getBulletColorForMode(mode);
         info.addPara(intelSubject.getIntelTitle(), getTitleColor(mode), 0f);
         info.beginGridFlipped(300f, 1, Misc.getTextColor(), 80f, 10f);
-        info.addToGrid(0, 0, sectorEntityToken.getName(), "Location", bulletColor);
-        info.addToGrid(0, 1, faction.getDisplayName(), "Faction", bulletColor);
-        info.addToGrid(0, 2, getStarSystemName(), "System", bulletColor);
+        info.addToGrid(0, 0, sectorEntityToken.getName(), "地点坐标", bulletColor);
+        info.addToGrid(0, 1, faction.getDisplayName(), "所属势力", bulletColor);
+        info.addToGrid(0, 2, getStarSystemName(), "星系坐标", bulletColor);
         info.addGrid(3f);
     }
 
@@ -100,7 +100,7 @@ public class HypernetIntel extends BaseIntelPlugin {
     private String getStarSystemName() {
         StarSystemAPI system = sectorEntityToken.getStarSystem();
         if (system == null) {
-            return "In Hyperspace";
+            return "超空间";
         }
         return system.getName();
     }
