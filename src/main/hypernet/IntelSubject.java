@@ -26,7 +26,7 @@ public abstract class IntelSubject {
     }
 
     public String getIntelDesc() {
-        return entity + "s";
+        return entity + "";
     }
 
     public abstract void createSmallDescription(TooltipMakerAPI info, float width, float height);
@@ -39,7 +39,7 @@ public abstract class IntelSubject {
         FactionAPI faction = market.getFaction();
         RelationshipAPI relationship = faction.getRelToPlayer();
         String reputation = relationship.getLevel().getDisplayName();
-        info.addPara(basicInfo + "The owner of this market is " + reputation.toLowerCase() + " towards you.", 10f,
+        info.addPara(basicInfo + "该市场所属势力与你的关系是" + reputation.toLowerCase() + ".", 10f,
                 Misc.getTextColor(), relationship.getRelColor(), reputation.toLowerCase());
     }
 
