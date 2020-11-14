@@ -31,7 +31,7 @@ public class Staff extends FilterAware {
             localizedPersonality = localizedPersonality.replaceAll("aggressive", "激进的");
             localizedPersonality = localizedPersonality.replaceAll("reckless", "鲁莽的");
             
-            plugin.addText("添加了对{" + personality + "}军官的检索.");
+            plugin.addText("添加了对{" + localizedPersonality + "}军官的检索.");
             provider = new OfficerIntelProvider(personality);
         }
 
