@@ -37,7 +37,7 @@ public abstract class PersonSubject extends IntelSubject {
         String isOrAre = adminsSize == 1 ? " 显示" : " 显示";
         String numberOrNo = adminsSize == 0 ? "没有 " : adminsSize + " ";
         String emptyOrS = adminsSize == 1 ? "" : "";
-        String basicInfo = "检索" + isOrAre + numberOrNo + entity + emptyOrS + "现在位于" + market.getName()
+        String basicInfo = "检索" + isOrAre + numberOrNo + "位 " + entity + emptyOrS + " 现在位于 " + market.getName()
                 + ". ";
         super.addBasicInfo(info, basicInfo);
     }
@@ -49,7 +49,7 @@ public abstract class PersonSubject extends IntelSubject {
         String numberOrNo = skillSize == 0 ? "没有" : skillSize + " ";
         String skillOrSkills = skillSize == 1 ? "技能" : "技能";
         String dotOrColon = skillSize == 0 ? "." : ":";
-        String adminPara = "%s," + person.getStats().getLevel() + "级" + entity + " 带有 " + numberOrNo
+        String adminPara = "%s, " + person.getStats().getLevel() + " 级 " + entity + " 带有 " + numberOrNo
                 + skillOrSkills + dotOrColon;
         info.addPara("", 0f);
         info.addPara(adminPara, 10f, Misc.getTextColor(), Misc.getHighlightColor(), person.getNameString());
