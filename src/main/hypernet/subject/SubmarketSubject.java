@@ -49,7 +49,7 @@ public abstract class SubmarketSubject extends IntelSubject {
         int entityCount = getEntityCount();
         String entityOrEntities = entityCount == 1 ? "" : "";
 
-        String basicInfo = String.format("%s}有{%d}个市场共计{%d}门{%s. ", market.getName(),
+        String basicInfo = String.format("%s}有{%d}个市场,共计{%d}门{%s. ", market.getName(),
                 submarketCount, entityCount, entity);
         
          //String basicInfo = String.format("There %s %d submarket%s with a total of %d %s%s on %s. ", isOrAreSubmarkets,
