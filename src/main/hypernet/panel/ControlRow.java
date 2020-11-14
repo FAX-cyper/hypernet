@@ -28,9 +28,9 @@ public class ControlRow extends BoardRow {
     protected List<BoardElement> getLeftElements() {
         List<BoardElement> elements = new ArrayList<>();
         elements.add(
-                new ButtonElement(160f, 20f, "Add a New Query", BUTTON_ADD, true, Misc.getPositiveHighlightColor()));
+                new ButtonElement(160f, 20f, "添加新的检索申请", BUTTON_ADD, true, Misc.getPositiveHighlightColor()));
         elements.add(new EmptyElement(10f, 20f));
-        elements.add(new ButtonElement(160f, 20f, "Refresh All Queries", BUTTON_REFRESH_ALL, isEnabled,
+        elements.add(new ButtonElement(160f, 20f, "更新所有检索结果", BUTTON_REFRESH_ALL, isEnabled,
                 Misc.getButtonTextColor()));
 
         return elements;
@@ -39,7 +39,7 @@ public class ControlRow extends BoardRow {
     @Override
     protected List<BoardElement> getRightElements() {
         List<BoardElement> elements = new ArrayList<>();
-        elements.add(new ButtonElement(100f, 20f, "Delete all", BUTTON_DELETE_ALL, isEnabled,
+        elements.add(new ButtonElement(100f, 20f, "全部删除", BUTTON_DELETE_ALL, isEnabled,
                 Misc.getNegativeHighlightColor()));
 
         return elements;
