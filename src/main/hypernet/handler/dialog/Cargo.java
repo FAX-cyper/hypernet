@@ -41,7 +41,7 @@ public class Cargo extends FilterAware implements CargoPickerListener {
         cargo.sort();
         for (CargoStackAPI cargoStack : cargo.getStacksCopy()) {
             IntelProvider provider = new CargoIntelProvider(cargoStack);
-            plugin.addText("添加了对" + cargoStack.getDisplayName() + "的检索.");
+            plugin.addText("添加了对{" + cargoStack.getDisplayName() + "}的检索.");
             plugin.addNewQuery(provider);
         }
         Menu.forceMenu(plugin);
