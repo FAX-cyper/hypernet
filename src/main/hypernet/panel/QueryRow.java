@@ -39,15 +39,15 @@ public class QueryRow extends BoardRow {
     protected List<BoardElement> getRightElements() {
         String queryIdentifier = "#" + String.valueOf(queryNumber);
         List<BoardElement> elements = new ArrayList<>();
-        elements.add(new ButtonElement(100f, 20f, "Delete", BUTTON_DELETE + queryIdentifier, true,
+        elements.add(new ButtonElement(100f, 20f, "删除", BUTTON_DELETE + queryIdentifier, true,
                 Misc.getNegativeHighlightColor()));
         elements.add(new EmptyElement(0f, 20f));
         if (query.isEnabled()) {
-            elements.add(new ButtonElement(60f, 20f, "On", BUTTON_DISABLE + queryIdentifier, true,
+            elements.add(new ButtonElement(60f, 20f, "开启", BUTTON_DISABLE + queryIdentifier, true,
                     Misc.getButtonTextColor()));
         } else {
             elements.add(
-                    new ButtonElement(60f, 20f, "Off", BUTTON_ENABLE + queryIdentifier, true, Misc.getGrayColor()));
+                    new ButtonElement(60f, 20f, "收起", BUTTON_ENABLE + queryIdentifier, true, Misc.getGrayColor()));
         }
         elements.add(new ParaElement(80f, 20f, query.isActive(), query.getResultCount()));
         return elements;
