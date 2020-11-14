@@ -32,7 +32,7 @@ public class IntelQuery {
 
     public String getDescription() {
         String off = isEnabled() ? "" : " (收起)";
-        String stale = isStale() ? " (stale)" : "";
+        String stale = isStale() ? " (过期)" : "";
         return intelProvider.getDescription() + off + stale;
     }
 
