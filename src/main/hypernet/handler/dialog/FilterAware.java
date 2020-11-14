@@ -19,7 +19,7 @@ public class FilterAware implements DialogHandler {
         if (previousOption.equals(DialogOption.INIT)) {
             String action = option.getName();
             plugin.addTitle(action);
-            plugin.addText("Please select filters and " + action.toLowerCase() + ".");
+            plugin.addText("请选择过滤项并" + action.toLowerCase() + ".");
             return init(plugin);
         }
 
