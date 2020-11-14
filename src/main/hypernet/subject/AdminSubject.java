@@ -13,7 +13,7 @@ import hypernet.filter.PersonFilter;
 public class AdminSubject extends PersonSubject {
 
     public AdminSubject(MarketAPI m) {
-        super("freelance administrator", m);
+        super("自由管理员", m);
     }
 
     @Override
