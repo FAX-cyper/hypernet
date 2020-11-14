@@ -16,7 +16,7 @@ public class OfficerSubject extends PersonSubject {
     private String personality;
 
     public OfficerSubject(String p, MarketAPI m) {
-        super(p + "{officer", m);
+        super(p + " officer", m);
         personality = p;
     }
 
