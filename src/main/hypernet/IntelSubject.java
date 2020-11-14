@@ -44,7 +44,7 @@ public abstract class IntelSubject {
         FactionAPI faction = market.getFaction();
         RelationshipAPI relationship = faction.getRelToPlayer();
         String reputation = relationship.getLevel().getDisplayName();
-        info.addPara(basicInfo + "该市场所属势力与你的关系是" + reputation.toLowerCase() + ".", 10f,
+        info.addPara(basicInfo + "该市场所属势力与你的关系是{" + reputation.toLowerCase() + ".", 10f,
                 Misc.getTextColor(), relationship.getRelColor(), reputation.toLowerCase());
     }
 
