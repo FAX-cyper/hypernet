@@ -34,19 +34,19 @@ public class Ship extends FilterAware implements FleetMemberPickerListener {
 
     @Override
     public void cancelledFleetMemberPicking() {
-        plugin.addText("Query cancelled...");
+        plugin.addText("检索取消...");
     }
 
     @Override
     public void pickedFleetMembers(List<FleetMemberAPI> fleet) {
         if (fleet.isEmpty()) {
-            plugin.addText("Query cancelled...");
+            plugin.addText("检索取消...");
             return;
         }
         for (FleetMemberAPI fleetMember : fleet) {
             ShipSubject subject = new ShipSubject(fleetMember, null);
             IntelProvider provider = new ShipIntelProvider(fleetMember);
-            plugin.addText("Adding intel query for " + subject.getIntelTitle() + ".");
+            plugin.addText("添加了对" + subject.getIntelTitle() + "的检索.");
             plugin.addNewQuery(provider);
         }
         Menu.forceMenu(plugin);
@@ -60,11 +60,11 @@ public class Ship extends FilterAware implements FleetMemberPickerListener {
 
         if (fleet.isEmpty()) {
             String size = filterManager.getFleetShipSize().name().substring(10).toLowerCase();
-            plugin.addText("No markets selling specified " + size + "s found.");
+            plugin.addText("对" + size + "的检索无任何结果.");
             return option;
         }
 
-        plugin.getDialog().showFleetMemberPickerDialog("Pick ships to query for...", "Query", "Cancel", 8, 12, 64f,
+        plugin.getDialog().showFleetMemberPickerDialog("选择检索舰船...", "检索", "取消", 8, 12, 64f,
                 true, true, fleet, this);
         return option;
     }
