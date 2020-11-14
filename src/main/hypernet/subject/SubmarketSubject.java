@@ -44,13 +44,17 @@ public abstract class SubmarketSubject extends IntelSubject {
     protected void addBasicInfo(TooltipMakerAPI info) {
         int submarketCount = getSubmarketCount();
         String isOrAreSubmarkets = submarketCount == 1 ? "is" : "are";
-        String submarketOrSubmarkets = submarketCount == 1 ? "" : "s";
+        String submarketOrSubmarkets = submarketCount == 1 ? "" : "";
 
         int entityCount = getEntityCount();
-        String entityOrEntities = entityCount == 1 ? "" : "s";
+        String entityOrEntities = entityCount == 1 ? "" : "";
 
-        String basicInfo = String.format("There %s %d submarket%s with a total of %d %s%s on %s. ", isOrAreSubmarkets,
-                submarketCount, submarketOrSubmarkets, entityCount, entity, entityOrEntities, market.getName());
+        String basicInfo = String.format("%s}有{%d}市场共计{%d}%s. ", market.getName(),
+                submarketCount, entityCount, entity);
+        
+         //String basicInfo = String.format("There %s %d submarket%s with a total of %d %s%s on %s. ", isOrAreSubmarkets,
+                //submarketCount, submarketOrSubmarkets, entityCount, entity, entityOrEntities, market.getName());
+        
         super.addBasicInfo(info, basicInfo);
     }
 
