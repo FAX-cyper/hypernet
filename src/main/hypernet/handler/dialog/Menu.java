@@ -8,14 +8,14 @@ public class Menu implements DialogHandler {
 
     @Override
     public DialogOption handle(DialogPlugin plugin) {
-        plugin.addText("Back to main menu...");
+        plugin.addText("返回主页面...");
         forceMenu(plugin);
         return DialogOption.INIT;
     }
 
     public static void forceMenu(DialogPlugin plugin) {
-        plugin.addTitle("HyperNET");
-        plugin.addText("Are there any other queries you would like to make?");
+        plugin.addTitle("超空间检索");
+        plugin.addText("还有什么检索申请吗?");
         plugin.showMenu();
     }
 }
