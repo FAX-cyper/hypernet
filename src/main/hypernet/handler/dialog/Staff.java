@@ -19,11 +19,11 @@ public class Staff extends FilterAware {
         MutableFilterManager filterManager = plugin.getFilterManager();
 
         if (filterManager.getStaffType().equals(DialogOption.STAFF_TYPE_ADMIN)) {
-            plugin.addText("添加了对星球管理员的检索.");
+            plugin.addText("添加了对{星球管理员}的检索.");
             provider = new AdminIntelProvider();
         } else {
             String personality = filterManager.getStaffOfficer().name().substring(8).toLowerCase();
-            plugin.addText("添加了对" + personality + "军官的检索.");
+            plugin.addText("添加了对{" + personality + "}军官的检索.");
             provider = new OfficerIntelProvider(personality);
         }
 
