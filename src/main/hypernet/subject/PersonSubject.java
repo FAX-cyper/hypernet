@@ -47,7 +47,7 @@ public abstract class PersonSubject extends IntelSubject {
         CollectionHelper.reduce(skills, new SkillLevelFilter());
         int skillSize = skills.size();
         String numberOrNo = skillSize == 0 ? "没有" : skillSize + " ";
-        String skillOrSkills = skillSize == 1 ? "技能" : "技能";
+        String skillOrSkills = skillSize == 1 ? "个技能" : "个技能";
         String dotOrColon = skillSize == 0 ? "." : ":";
         String adminPara = "%s, " + person.getStats().getLevel() + "{级}" + entity + "{带有}" + numberOrNo
                 + skillOrSkills + dotOrColon;
