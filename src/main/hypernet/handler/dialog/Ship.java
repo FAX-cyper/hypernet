@@ -46,7 +46,7 @@ public class Ship extends FilterAware implements FleetMemberPickerListener {
         for (FleetMemberAPI fleetMember : fleet) {
             ShipSubject subject = new ShipSubject(fleetMember, null);
             IntelProvider provider = new ShipIntelProvider(fleetMember);
-            plugin.addText("添加了对" + subject.getIntelTitle() + "的检索.");
+            plugin.addText("添加了对{" + subject.getIntelTitle() + "}的检索.");
             plugin.addNewQuery(provider);
         }
         Menu.forceMenu(plugin);
