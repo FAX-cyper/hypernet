@@ -23,6 +23,14 @@ public class Staff extends FilterAware {
             provider = new AdminIntelProvider();
         } else {
             String personality = filterManager.getStaffOfficer().name().substring(8).toLowerCase();
+            
+            String localizedPersonality = personality;
+            localizedPersonality = localizedPersonality.replaceAll("timid", "胆小的");
+            localizedPersonality = localizedPersonality.replaceAll("cautious", "谨慎的");
+            localizedPersonality = localizedPersonality.replaceAll("steady", "沉着的");
+            localizedPersonality = localizedPersonality.replaceAll("aggressive", "激进的");
+            localizedPersonality = localizedPersonality.replaceAll("reckless", "鲁莽的");
+            
             plugin.addText("添加了对{" + personality + "}军官的检索.");
             provider = new OfficerIntelProvider(personality);
         }
