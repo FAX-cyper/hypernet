@@ -29,19 +29,19 @@ public class Cargo extends FilterAware implements CargoPickerListener {
 
     @Override
     public void cancelledCargoSelection() {
-        plugin.addText("Query cancelled...");
+        plugin.addText("检索取消...");
     }
 
     @Override
     public void pickedCargo(CargoAPI cargo) {
         if (cargo.isEmpty()) {
-            plugin.addText("Query cancelled...");
+            plugin.addText("检索取消...");
             return;
         }
         cargo.sort();
         for (CargoStackAPI cargoStack : cargo.getStacksCopy()) {
             IntelProvider provider = new CargoIntelProvider(cargoStack);
-            plugin.addText("Adding intel query for " + cargoStack.getDisplayName() + ".");
+            plugin.addText("添加了对" + cargoStack.getDisplayName() + "的检索.");
             plugin.addNewQuery(provider);
         }
         Menu.forceMenu(plugin);
@@ -60,11 +60,11 @@ public class Cargo extends FilterAware implements CargoPickerListener {
 
         if (cargo.isEmpty()) {
             String category = filterManager.getCargoType().getName().substring(7).toLowerCase();
-            plugin.addText("No markets selling " + category + " found.");
+            plugin.addText("对" + category + "的检索无任何结果.");
             return option;
         }
 
-        plugin.getDialog().showCargoPickerDialog("Pick items to query for...", "Query", "Cancel", false, 0f, cargo,
+        plugin.getDialog().showCargoPickerDialog("选取检索项目...", "检索", "取消", false, 0f, cargo,
                 this);
         return option;
     }
