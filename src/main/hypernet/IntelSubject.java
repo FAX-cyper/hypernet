@@ -31,7 +31,7 @@ public abstract class IntelSubject {
     }
 
     public String getIntelDesc() {
-        return entity + "";
+        return entity;
     }
 
     public abstract void createSmallDescription(TooltipMakerAPI info, float width, float height);
