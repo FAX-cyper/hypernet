@@ -15,11 +15,11 @@ public abstract class IntelSubject {
     public IntelSubject(String e, MarketAPI m) {
         entity = e;
         market = m;
-        entity = entity.replaceAll("timid officer", "胆小的{军官");
-        entity = entity.replaceAll("cautious officer", "谨慎的{军官");
-        entity = entity.replaceAll("steady officer", "沉着的{军官");
-        entity = entity.replaceAll("aggressive officer", "激进的{军官");
-        entity = entity.replaceAll("reckless officer", "鲁莽的{军官");
+        entity = entity.replaceAll("timid officer", "{胆小的{军官}");
+        entity = entity.replaceAll("cautious officer", "{谨慎的{军官}");
+        entity = entity.replaceAll("steady officer", "{沉着的{军官}");
+        entity = entity.replaceAll("aggressive officer", "{激进的{军官}");
+        entity = entity.replaceAll("reckless officer", "{鲁莽的{军官}");
     }
 
     public String getIcon() {
